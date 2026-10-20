@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let n1 = parseFloat(prompt("Digite o primeiro número inteiro: "));
+        let n2 = parseFloat(prompt("Digite o segundo número inteiro: "));
+        let n3 = parseFloat(prompt("Digite o terceiro número inteiro: "));
+
+        switch(true)
+        {
+            case (n1 === n2): var msg_1 = `N1: ${n1} e N2: ${n2} são iguais `; break;
+            case (n2 === n3): var msg_1 = `N2: ${n2} e N3: ${n3} são iguais `; break;
+            case (n1 === n3): var msg_1 = `N1: ${n1} e N3: ${n3} são iguais `; break;
+            case (n1 === n2 === n3): var msg_1 = `Os números são todos iguais `; break;
+            default: msg_1 = `Nenhum número é igual a outro N1: ${n1} != N2: ${n2} != N3: ${n3} `;
+        }
+        switch(true)
+        {
+            case (n1 > n2 && n1 > n3): var msg_2 = `e N1: ${n1} é o maior número.`; break;
+            case (n2 > n3 && n2 > n1): var msg_2 = `e N2: ${n2} é o maior número.`; break;
+            case (n3 > n2 && n3 > n1): var msg_2 = `e N3: ${n3} é o maior número.`; break;
+            default: msg_2 = `e nenhum é o maior número.`
+        }
+        
+        alert(msg_1 + msg_2);
+
+    </script>
+</body>
+</html>

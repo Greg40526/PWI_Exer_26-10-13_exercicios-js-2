@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Verificação de números primos</h2>
+    
+    <label for="numero">Digite um número:</label>
+    <input type="number" id="numero">
+    <button onclick="calcularPrimo()">Verificar</button>
+
+    <p id="resultado"></p>
+
+    <script>
+    function calcularPrimo() {
+        
+        // Pega o valor do input
+        const valor = document.getElementById('numero').value;
+    
+        // Calcula se o número é primo
+        let isPrime = true;
+        if (valor <= 1) {
+            isPrime = false;
+        } else {
+            for (let i = 2; i <= Math.sqrt(valor); i++) {
+                if (valor % i === 0) {
+                    isPrime = false;
+                    break;
+                }
+            }
+        }
+            
+        // Exibe o resultado na tela
+        document.getElementById('resultado').innerText = isPrime ? "O número é primo." : "O número não é primo.";
+        document.getElementById('resultado').style.color = isPrime ? "green" : "red";
+        }
+    </script>
+</body>
+</html>
